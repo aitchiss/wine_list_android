@@ -3,6 +3,7 @@ package com.codeclan.winelist;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Adapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -21,5 +22,7 @@ public class WineListActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.wine_list);
         listView.setAdapter(wineListAdapter);
+
+
     }
 }

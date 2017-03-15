@@ -24,8 +24,8 @@ public class WineListTest {
     public void testWinePrice(){
         wineList = new WineList();
         Wine wineFound = wineList.getWineList().get(0);
-        Double winePrice = wineFound.getPrice();
-        Double expectedPrice = 4.00;
+        String winePrice = wineFound.getPrice();
+        String expectedPrice = "£4.0";
         assertEquals(expectedPrice, winePrice);
     }
 }

@@ -25,8 +25,11 @@ public class Wine {
         return this.colour;
     }
 
-    public Double getPrice(){
-        return this.price;
+    public String getPrice(){
+
+        String price = this.price.toString();
+        String formattedPrice = "£" + price;
+        return formattedPrice;
     }
 
 }

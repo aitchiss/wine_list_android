@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -35,7 +36,16 @@ public class WineListAdapter extends ArrayAdapter<Wine> {
         wineColour.setText(currentWine.getColour());
 
         TextView winePrice = (TextView) listItemView.findViewById(R.id.wine_price);
-        winePrice.setText(currentWine.getPrice().toString());
+        winePrice.setText(currentWine.getPrice());
+
+        ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
+
+        if (currentWine.getColour().equals("red")){
+            imageView.setImageResource(R.mipmap.redwine);
+        } else if (currentWine.getColour().equals("white")){
+            imageView.setImageResource(R.mipmap.whitewine);
+        }
+
 
         return listItemView;
     }
